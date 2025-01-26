@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | MuslimChic Signature</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="MCS.jpg" alt="MuslimChic Signature Logo"></a><!-- Replace with actual logo -->
+            </div>
+            <ul class="nav-links">
+                <a href="#">Hijabs</a>
+                <ul class="dropdown">
+                    <li><a href="premium-jersey.html">Premium Jersey Hijabs</a></li>
+                    <li><a href="chiffon-hijab.html">Chiffon Hijabs</a></li>
+                    <li><a href="Khimar.html">Khimars</a></li>
+                    <li><a href="patterned-hijab.html">Patterned Hijabs</a></li>
+                    <li><a href="everyday-essentials.html">Everyday Essentials</a></li>
+                </ul>
+            </li>
+            <li><a href="underscarves.html">Underscarves</a></li>
+            <li>
+                <a href="#">Accessories</a>
+                <ul class="dropdown">
+                    <li><a href="pins.html">Pins</a></li>
+                    <li><a href="magnet.html">Magnets</a></li>
+                </ul>
+            </li>
+            <li><a href="Rewards.html">Rewards</a></li>
+            <li><a href="ambassador.html">Ambassador</a></li>
+            <li>
+                <a href="#">Perfume</a>
+                <ul class="dropdown">
+                    <li><a href="perfume-oil.html">Perfume Oil</a></li>
+                    <li><a href="body-mist.html">Body mist</a></li>
+                    <li><a href="humra.html">Humra</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="nav-icons">
+            <a href="search.html"><img src="Images/search-icon.png" alt="Search"></a>
+            <a href="account.html"><img src="Images/account-icon.png" alt="Account"></a>
+            <a href="cart.html"><img src="Images/cart-icon.jpeg" alt="Cart"></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <h1>Your Shopping Cart</h1>
+            <div class="cart-items">
+                <!-- Cart Item -->
+                <div class="cart-item">
+                    <img src="Images/khimar 1.jpeg" alt="Classic Black Khimar">
+                    <div class="item-details">
+                        <h2>Classic Black Khimar</h2>
+                        <p>Price: ₦6,500</p>
+                        <label for="quantity1">Quantity:</label>
+                        <input type="number" id="quantity1" value="1" min="1">
+                        <p>Total: ₦6,500</p>
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+
+                <!-- Cart Item -->
+                <div class="cart-item">
+                    <img src="Images/khimar 11.jpeg" alt="Elegant White Khimar">
+                    <div class="item-details">
+                        <h2>Elegant White Khimar</h2>
+                        <p>Price: ₦6,800</p>
+                        <label for="quantity2">Quantity:</label>
+                        <input type="number" id="quantity2" value="1" min="1">
+                        <p>Total: ₦6,800</p>
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <p>Subtotal: ₦13,300</p>
+                <p>Shipping: ₦1,500</p>
+                <p><strong>Grand Total: ₦14,800</strong></p>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MuslimChic Signature. All rights reserved.</p>
+    </footer>
+</body>
+</html>
