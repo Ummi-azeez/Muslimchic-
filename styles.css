@@ -1,0 +1,2122 @@
+/* Global Styles */
+:root {
+    --primary-color: #a491df; /* Soft pastel purple */
+    --secondary-color: #f5cce8; /* Soft pastel pink */
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --light-bg-color: #fff;
+    --border-color: #ddd;
+    --border-radius: 5px;
+    --padding: 20px;
+    --font-family: 'Arial', sans-serif;
+    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Header and Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-bg-color);
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo img {
+    max-height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-links .active {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    list-style: none;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #f2f2f2;
+}
+
+.nav-links li:hover > .dropdown {
+    display: block;
+}
+
+.nav-icons img {
+    height: 20px;
+    margin-left: 15px;
+}
+
+.hero {
+    background: url('your-hero-image.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 120px var(--padding);
+    color: var(--light-bg-color);
+    background-color: var(--secondary-color); /* Soft pastel pink as a fallback */
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--padding);
+    color: var(--primary-color); /* Soft pastel purple */
+}
+.hero .btn {
+    background-color: var(--primary-color); /* Soft pastel purple */
+    color: var(--light-bg-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+.hero .btn:hover {
+    background-color: var(--secondary-color); /* Swap to pastel pink on hover */
+}
+
+/* Sections */
+/* Bestselling Hijabs Section */
+.bestsellers {
+    background-color: var(--bg-color);
+    padding: 40px var(--padding);
+    text-align: center;
+}
+.bestsellers h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: var(--padding);
+}
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.product {
+    background-color: var(--light-bg-color);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+.product img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+}
+.product h3 {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.product p {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.product .btn {
+    text-decoration: none;
+    color: var(--light-bg-color);
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, transform 0.3s;
+}
+.product .btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+/* About Us */
+.about-us {
+    background-color: var(--light-bg-color);
+    padding: 40px var(--padding);
+    text-align: center;
+    border-top: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+}
+.about-us h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: var(--padding);
+}
+.about-us p {
+    color: var(--text-color);
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: var(--secondary-color);
+    color: var(--light-bg-color);
+    padding: 40px var(--padding);
+    text-align: center;
+}
+.testimonials h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: var(--padding);
+}
+.testimonials .testimonial {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1rem;
+    font-style: italic;
+    background-color: var(--light-bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.testimonials .testimonial::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: var(--light-bg-color);
+    position: absolute;
+    bottom: -7.5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Newsletter */
+.newsletter {
+    background-color: var(--primary-color);
+    padding: 40px var(--padding);
+    text-align: center;
+    color: var(--light-bg-color);
+}
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: var(--padding);
+}
+.newsletter input[type="email"] {
+    width: 60%;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+}
+.newsletter button {
+    padding: 15px 25px;
+    font-size: 1rem;
+    color: var(--light-bg-color);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+.newsletter button:hover {
+    background-color: var(--light-bg-color);
+    color: var(--primary-color);
+}
+
+/* Categories Section */
+.categories {
+    background-color: var(--secondary-color);
+    padding: var(--padding);
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+.categories h2 {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.category-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.category-card {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.category-card img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+}
+.category-card h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.category-card h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Call-to-Action Section */
+.call-to-action {
+    background-color: var(--primary-color);
+    padding: var(--padding);
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+}
+.call-to-action h2 {
+    color: var(--light-bg-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.call-to-action p {
+    color: var(--light-bg-color);
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.call-to-action .btn {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, transform 0.3s;
+}
+.call-to-action .btn:hover {
+    background-color: var(--text-color);
+    transform: translateY(-5px);
+}
+
+/* FAQs Section */
+.faqs {
+    background-color: var(--secondary-color);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+}
+.faqs h2 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.faq-item {
+    background-color: var(--primary-color);
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.faq-item h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.faq-item p {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.footer-links a {
+    color: var(--light-bg-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        max-width: 90%;
+    }
+
+    .rewards-section .reward-benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Utility Classes */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Product Page Styles */
+/* Premium Jersey Hijabs Page */
+.premium-jersey-hijabs {
+    background-color: var(--light-bg-color);
+    padding: 40px 20px;
+    font-family: var(--font-family);
+}
+
+.premium-jersey-hijabs h2 {
+    font-size: 2em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.product {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.product h3 {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin: 15px 0;
+}
+
+.product p {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.product .btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.product .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+.product-info-section {
+    background-color: var(--light-bg-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-top: 40px;
+}
+
+.product-info-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.product-info-section ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.reviews .review {
+    margin-bottom: 15px;
+}
+
+.reviews .review p {
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.related-products {
+    padding: 30px 0;
+    background-color: #f2f2f2;
+}
+
+.related-products h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-card {
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    background-color: var(--light-bg-color);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.product-card h4 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+/* Chiffon Hijabs Page */
+.chiffon-hijabs {
+    background-color: var(--light-bg-color);
+    padding: 40px 20px;
+    font-family: var(--font-family);
+}
+
+.chiffon-hijabs h2 {
+    font-size: 2em;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.product {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.product h3 {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin: 15px 0;
+}
+
+.product p {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.product .btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.product .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+/* Patterned Hijabs Page Styles */
+.patterned-hijabs {
+    background-color: var(--light-bg-color);
+    padding: 50px 20px;
+}
+
+.patterned-hijabs h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 30px;
+    justify-items: center;
+}
+
+.product {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.product .price {
+    font-size: 1.2em;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.product .btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Khimar Hijabs Page Styles */
+.khimar-hijabs {
+    background-color: var(--light-bg-color);
+    padding: 50px 20px;
+}
+
+.khimar-hijabs h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 30px;
+    justify-items: center;
+}
+
+.product {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 250px;  /* Adjust size for 4 columns */
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.product .price {
+    font-size: 1.2em;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.product .btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Everyday Essentials Hijabs Page Styles */
+.everyday-essentials {
+    background-color: var(--light-bg-color);
+    padding: 50px 20px;
+}
+
+.everyday-essentials h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 30px;
+    justify-items: center;
+}
+
+.product {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 250px;  /* Adjust size for 4 columns */
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.product .price {
+    font-size: 1.2em;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.product .btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Underscarves Section */
+.underscarves {
+    background-color: var(--bg-color);
+    padding: 40px 0;
+}
+
+.underscarves h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: var(--primary-color);
+}
+
+.product p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.product .btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pins Page Specific Styles */
+.pins {
+    padding: var(--padding);
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.pins h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: var(--padding);
+}
+
+/* Product Card */
+.product {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+/* Product Name */
+.product h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+/* Product Price */
+.product p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* Add to Cart Button */
+.product .btn {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    text-transform: uppercase;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.product .btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: var(--padding);
+}
+
+.product {
+    background: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Rewards Section */
+.rewards {
+    padding: var(--padding);
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.rewards h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.rewards p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: var(--padding);
+}
+
+.reward-item {
+    background: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.reward-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.reward-item h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.reward-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Call-to-Action Section */
+.call-to-action {
+    padding: var(--padding);
+    background: var(--secondary-color);
+    text-align: center;
+    color: var(--text-color);
+}
+
+.call-to-action h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.call-to-action p {
+    margin-bottom: 20px;
+}
+
+.call-to-action .btn {
+    background: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.call-to-action .btn:hover {
+    background: var(--light-bg-color);
+    color: var(--primary-color);
+}
+
+/* Sign-Up Page Styles */
+.signup {
+    padding: var(--padding);
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.signup h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.signup p {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.signup-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: var(--padding);
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--light-bg-color);
+}
+
+.signup-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.signup-form .btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.signup-form .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.signup-form .login-prompt {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.signup-form .login-prompt a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.signup-form .login-prompt a:hover {
+    color: var(--secondary-color);
+}
+
+/* Login Page Styles */
+.login {
+    padding: var(--padding);
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.login h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.login p {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: var(--padding);
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text-color);
+    background: var(--light-bg-color);
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.login-form .btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-form .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.extra-links {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.extra-links a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.extra-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.ambassador-hero {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+}
+
+.ambassador-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.ambassador-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.ambassador-hero .btn {
+    background-color: var(--secondary-color);
+    color: var(--light-bg-color);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.ambassador-hero .btn:hover {
+    background-color: var(--light-bg-color);
+    color: var(--primary-color);
+}
+
+/* Program Info */
+.program-info, .how-it-works {
+    padding: 40px 20px;
+    background-color: var(--light-bg-color);
+    text-align: center;
+}
+
+.program-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.program-info ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Steps Section */
+.steps {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.step {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    width: 30%;
+    min-width: 250px;
+    text-align: left;
+}
+
+/* Apply Section */
+.apply {
+    padding: 40px 20px;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.apply form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.apply .form-group {
+    margin-bottom: 15px;
+}
+
+.apply input, .apply textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.apply button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Perfume Hero Section */
+.perfume-hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+}
+
+.perfume-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.perfume-hero p {
+    font-size: 1.2rem;
+}
+
+/* Products Section */
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+.product p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.product .btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Hero Section - Body Mists */
+.perfume-hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+}
+
+.perfume-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.perfume-hero p {
+    font-size: 1.2rem;
+}
+
+/* Products Section */
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+.product p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.product .btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Hero Section - Humra */
+.perfume-hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+}
+
+.perfume-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.perfume-hero p {
+    font-size: 1.2rem;
+}
+
+/* Products Section */
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+.product p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.product .btn {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.about-hero {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+}
+
+/* About Content */
+.about-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Our Team Section */
+.our-team {
+    background-color: var(--bg-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.our-team h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Subscription Section */
+.subscribe-section {
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.subscribe-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.subscribe-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    width: 300px;
+    max-width: 100%;
+    outline: none;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--light-bg-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: var(--text-color);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--light-bg-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.contact-details {
+    background-color: var(--light-bg-color);
+    padding: var(--padding);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 50px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.faq-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding-top 0.3s ease;
+}
+
+.faq-answer p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Active Question */
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 100px; /* Adjust based on content */
+    padding-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .faq-section {
+        padding: 30px 10px;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Privacy Policy Section */
+.privacy-section {
+    padding: 50px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.privacy-section h1,
+.privacy-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.privacy-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.privacy-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.privacy-section ul li {
+    margin-bottom: 10px;
+}
+
+.privacy-section address {
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.privacy-section address a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.privacy-section address a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+    .privacy-section h1,
+    .privacy-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .privacy-section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Terms and Conditions Section */
+.terms-section {
+    padding: 50px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.terms-section h1,
+.terms-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.terms-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.terms-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.terms-section ul li {
+    margin-bottom: 10px;
+}
+
+.terms-section a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.terms-section a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .terms-section h1,
+    .terms-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .terms-section p {
+        font-size: 0.9rem;
+    }
+}
