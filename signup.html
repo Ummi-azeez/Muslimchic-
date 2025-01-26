@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="Images/MCS.jpg" alt="MuslimChic Signature Logo"></a><!-- Replace with actual logo -->
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">Hijabs</a>
+                <ul class="dropdown">
+                    <li><a href="premium-jersey.html">Premium Jersey Hijabs</a></li>
+                    <li><a href="chiffon-hijab.html">Chiffon Hijabs</a></li>
+                    <li><a href="Khimar.html">Khimars</a></li>
+                    <li><a href="patterned-hijab.html">Patterned Hijabs</a></li>
+                    <li><a href="everyday-essentials.html">Everyday Essentials</a></li>
+                </ul>
+            </li>
+            <li><a href="underscarves.html">Underscarves</a></li>
+            <li>
+                <a href="#">Accessories</a>
+                <ul class="dropdown">
+                    <li><a href="pins.html">Pins</a></li>
+                    <li><a href="magnet.html">Magnets</a></li>
+                </ul>
+            </li>
+            <li><a href="Rewards.html">Rewards</a></li>
+            <li><a href="ambassador.html">Ambassador</a></li>
+            <li>
+                <a href="#">Perfume</a>
+                <ul class="dropdown">
+                    <li><a href="perfume-oil.html">Perfume Oil</a></li>
+                    <li><a href="body-mist.html">Body mist</a></li>
+                    <li><a href="humra.html">Humra</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="nav-icons">
+            <a href="search.html"><img src="search-icon.png" alt="Search"></a>
+            <a href="account.html"><img src="account-icon.png" alt="Account"></a>
+            <a href="cart.html"><img src="cart-icon.png" alt="Cart"></a>
+        </div>
+    </nav>
+       
+  <!-- Sign-Up Section -->
+  <section class="signup">
+    <div class="container">
+        <h1>Create an Account</h1>
+        <p>Join our community and start earning rewards today!</p>
+
+        <form action="process-signup.php" method="POST" class="signup-form">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter a secure password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Sign Up</button>
+            </div>
+            <p class="login-prompt">Already have an account? <a href="login.html">Log In</a></p>
+        </form>
+    </div>
+</section>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="contact.html">Contact Us</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <p>&copy; 2025 MuslimChic Signature. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
