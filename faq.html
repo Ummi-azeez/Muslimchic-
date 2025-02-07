@@ -4,106 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="logo">
-            <a href="index.html"><img src="MCS.jpg" alt="MuslimChic Signature Logo"></a><!-- Replace with actual logo -->
-           
+            <a class="navbar-brand" href="index.html"><img src="MCS.jpg" alt="MuslimChic Signature Logo"></a>
         </div>
-        <ul class="nav-links">
-            <li>
-                <a href="#">Hijabs</a>
-                <ul class="dropdown">
-                    <li><a href="premium-jersey.html">Premium Jersey Hijabs</a></li>
-                    <li><a href="chiffon-hijab.html">Chiffon Hijabs</a></li>
-                    <li><a href="Khimar.html">Khimars</a></li>
-                    <li><a href="patterned-hijab.html">Patterned Hijabs</a></li>
-                    <li><a href="everyday-essentials.html">Everyday Essentials</a></li>
-                </ul>
-            </li>
-            <li><a href="underscarves.html">Underscarves</a></li>
-            <li>
-                <a href="#">Accessories</a>
-                <ul class="dropdown">
-                    <li><a href="pins.html">Pins</a></li>
-                    <li><a href="magnet.html">Magnets</a></li>
-                </ul>
-            </li>
-            <li><a href="Rewards.html">Rewards</a></li>
-            <li><a href="ambassador.html">Ambassador</a></li>
-            <li>
-                <a href="#">Perfume</a>
-                <ul class="dropdown">
-                    <li><a href="perfume-oil.html">Perfume Oil</a></li>
-                    <li><a href="body-mist.html">Body mist</a></li>
-                    <li><a href="humra.html">Humra</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="nav-icons">
-            <a href="search.html"><img src="search-icon.png" alt="Search"></a>
-            <a href="account.html"><img src="account-icon.png" alt="Account"></a>
-            <a href="cart.html"><img src="cart-icon.png" alt="Cart"></a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hijabs
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="premium-jersey.html">Premium Jersey Hijabs</a>
+                        <a class="dropdown-item" href="chiffon-hijab.html">Chiffon Hijabs</a>
+                        <a class="dropdown-item" href="Khimar.html">Khimars</a>
+                        <a class="dropdown-item" href="patterned-hijab.html">Patterned Hijabs</a>
+                        <a class="dropdown-item" href="everyday-essentials.html">Everyday Essentials</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="underscarves.html">Underscarves</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="accessoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Accessories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="accessoriesDropdown">
+                        <a class="dropdown-item" href="pins.html">Pins</a>
+                        <a class="dropdown-item" href="magnet.html">Magnets</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="Rewards.html">Rewards</a></li>
+                <li class="nav-item"><a class="nav-link" href="ambassador.html">Ambassador</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="perfumeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Perfume
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="perfumeDropdown">
+                        <a class="dropdown-item" href="perfume-oil.html">Perfume Oil</a>
+                        <a class="dropdown-item" href="body-mist.html">Body Mist</a>
+                        <a class="dropdown-item" href="humra.html">Humra</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="nav-icons">
+                <a href="search.html"><img src="search-icon.png" alt="Search"></a>
+                <a href="account.html"><img src="account-icon.png" alt="Account"></a>
+                <a href="cart.html"><img src="cart-icon.png" alt="Cart"></a>
+            </div>
         </div>
     </nav>
-       
-<!-- FAQ Section -->
-<section class="faq-section">
-    <div class="container">
-        <h1>Frequently Asked Questions</h1>
-        <div class="faq">
-            <!-- Question 1 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What is your return policy?</h3>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>We accept returns within 14 days of purchase. Items must be in original condition and packaging.</p>
-                </div>
-            </div>
 
-            <!-- Question 2 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How long does shipping take?</h3>
-                    <span class="toggle-icon">+</span>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h1 class="my-4">Frequently Asked Questions</h1>
+            <div class="accordion" id="faqAccordion">
+                <!-- Question 1 -->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is your return policy?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            We accept returns within 14 days of purchase. Items must be in original condition and packaging.
+                        </div>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>Shipping typically takes 3-5 business days within Nigeria. International delivery may take 7-14 days.</p>
-                </div>
-            </div>
 
-            <!-- Question 3 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Can I customize my order?</h3>
-                    <span class="toggle-icon">+</span>
+                <!-- Question 2 -->
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How long does shipping take?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Shipping typically takes 3-5 business days within Nigeria. International delivery may take 7-14 days.
+                        </div>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>Yes! We offer bespoke services. Contact us to learn more about custom designs and orders.</p>
-                </div>
-            </div>
 
-            <!-- Question 4 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Do you offer gift wrapping services?</h3>
-                    <span class="toggle-icon">+</span>
+                <!-- Question 3 -->
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Can I customize my order?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Yes! We offer bespoke services. Contact us to learn more about custom designs and orders.
+                        </div>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>Absolutely! Add gift wrapping during checkout for a small fee.</p>
+
+                <!-- Question 4 -->
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Do you offer gift wrapping services?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Absolutely! Add gift wrapping during checkout for a small fee.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-light text-center">
         <div class="footer-links">
             <a href="contact.html">Contact Us</a>
             <a href="terms.html">Terms of Service</a>
@@ -112,7 +140,9 @@
         </div>
         <p>&copy; 2025 MuslimChic Signature. All Rights Reserved.</p>
     </footer>
-<script src="main.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
