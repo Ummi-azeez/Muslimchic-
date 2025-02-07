@@ -4,183 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MuslimChic Signature - Online Hijab Store</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <img src="Images/MCS.jpg" alt="MuslimChic Signature Logo"> <!-- Replace with actual logo -->
-        </div>
-        <ul class="nav-links">
-            <li>
-                <a href="#">Hijabs</a>
-                <ul class="dropdown">
-                    <li><a href="premium-jersey.html">Premium Jersey Hijabs</a></li>
-                    <li><a href="chiffon-hijab.html">Chiffon Hijabs</a></li>
-                    <li><a href="Khimar.html">Khimars</a></li>
-                    <li><a href="patterned-hijab.html">Patterned Hijabs</a></li>
-                    <li><a href="everyday-essentials.html">Everyday Essentials</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Images/MCS.jpg" alt="MuslimChic Signature Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Hijabs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="premium-jersey.html">Premium Jersey</a></li>
+                            <li><a class="dropdown-item" href="chiffon-hijab.html">Chiffon Hijabs</a></li>
+                            <li><a class="dropdown-item" href="Khimar.html">Khimars</a></li>
+                            <li><a class="dropdown-item" href="patterned-hijab.html">Patterned Hijabs</a></li>
+                            <li><a class="dropdown-item" href="everyday-essentials.html">Everyday Essentials</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="underscarves.html">Underscarves</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accessories.html">Accessories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span class="badge bg-dark cart-count">0</span></a></li>
                 </ul>
-            </li>
-            <li><a href="underscarves.html">Underscarves</a></li>
-            <li>
-                <a href="#">Accessories</a>
-                <ul class="dropdown">
-                    <li><a href="pins.html">Pins</a></li>
-                    <li><a href="magnet.html">Magnets</a></li>
-                </ul>
-            </li>
-            <li><a href="Rewards.html">Rewards</a></li>
-            <li><a href="ambassador.html">Ambassador</a></li>
-            <li>
-                <a href="#">Perfume</a>
-                <ul class="dropdown">
-                    <li><a href="perfume-oil.html">Perfume Oil</a></li>
-                    <li><a href="body-mist.html">Body mist</a></li>
-                    <li><a href="humra.html">Humra</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="nav-icons">
-            <a href="search.html"><img src="Images/search-icon.png" alt="Search"></a>
-            <a href="account.html"><img src="Images/account-icon.png" alt="Account"></a>
-            <a href="cart.html"><img src="Images/cart-icon.jpeg" alt="Cart"> <span class="cart-count">0</span></a>
+            </div>
         </div>
     </nav>
-       
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Our Store</h1>
-            <p>Your Go-To for Stylish, Effortless, & Comfortable Hijabs</p>
-            <a href="shop.html" class="btn">Shop All Hijabs</a>
+    <section class="hero text-center text-white d-flex align-items-center justify-content-center" style="height: 50vh; background: url('hero-image.jpg') no-repeat center center/cover;">
+        <div class="container">
+            <h1 class="fw-bold">Your Go-To for Stylish, Effortless & Comfortable Hijabs</h1>
+            <a href="shop.html" class="btn btn-primary mt-3">Shop All Hijabs</a>
         </div>
     </section>
 
     <!-- Bestselling Hijabs -->
-<section class="bestsellers">
-    <h2>Bestselling Hijabs</h2>
-    <div class="product-grid">
-        <!-- Product 1 -->
-        <div class="product">
-            <img src="Images/jersey 6.jpeg" alt="Instant Premium Jersey Hijab">
-            <h3>Instant Premium Jersey Hijab</h3>
-            <p>₦19,000</p>
-            <a href="premium-jersey.html" class="btn">Shop Now</a>
-        </div>
-        <!-- Product 2 -->
-        <div class="product">
-            <img src="Images/chiffon.jpeg" alt="Premium Chiffon Hijab">
-            <h3>Premium Chiffon Hijab</h3>
-            <p>₦15,000</p>
-            <a href="chiffon-hijab.html" class="btn">Shop Now</a>
-        </div>
-        <!-- Product 3 -->
-        <div class="product">
-            <img src="Images/essential 4.jpeg" alt="everyday-hijab">
-            <h3>Everyday Hijab</h3>
-            <p>₦16,000</p>
-            <a href="everyday-essentials.html" class="btn">Shop Now</a>
-        </div>
-    </div>
-</section>
-
-    <!-- About Us Section -->
-<section class="about-us">
-    <div class="container">
-        <h2>About Us</h2>
-        <p>Welcome to MuslimChic Signature! We are passionate about providing high-quality hijabs, accessories, and perfumes that meet your style and comfort needs. Discover the heart of our story and what makes us unique.</p>
-        <a href="about.html" class="btn">Learn More</a>
-    </div>
-</section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonial">
-            <p>"Absolutely love how easy this is to use, no fuss, no pins and doesn't move out of place. Love the lightweight material, colour and fast service. Definitely worthwhile!"</p>
-            <cite>– Salma Shaheen</cite>
-        </div>
-        <div class="testimonial">
-            <p>"Their chiffon hijabs are the best quality chiffon I’ve tried so far. The non-slip feature definitely holds true compared to others. The chestnut color is absolutely gorgeous. Highly recommend!"</p>
-            <cite>– Aalaa Shahin</cite>
+    <section class="container py-5">
+        <h2 class="text-center mb-4">Bestselling Hijabs</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="Images/jersey 6.jpeg" class="card-img-top" alt="Instant Premium Jersey Hijab">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Instant Premium Jersey Hijab</h5>
+                        <p class="card-text">₦19,000</p>
+                        <a href="premium-jersey.html" class="btn btn-primary w-100">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="Images/chiffon.jpeg" class="card-img-top" alt="Premium Chiffon Hijab">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Premium Chiffon Hijab</h5>
+                        <p class="card-text">₦15,000</p>
+                        <a href="chiffon-hijab.html" class="btn btn-primary w-100">Shop Now</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Newsletter Signup Section -->
-<section class="newsletter">
-    <div class="container">
+    <!-- About Us Section -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <p class="lead">We provide high-quality hijabs, accessories, and perfumes that meet your style and comfort needs.</p>
+            <a href="about.html" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="container py-5 text-center">
         <h2>Stay Updated</h2>
         <p>Sign up for our newsletter to get the latest updates and exclusive offers!</p>
-        <form action="subscribe.html" method="post" class="newsletter-form">
-            <input type="email" name="email" placeholder="Enter your email address" required>
-            <button type="submit" class="btn">Subscribe</button>
+        <form class="row g-3 justify-content-center">
+            <div class="col-md-6">
+                <input type="email" class="form-control" placeholder="Enter your email address" required>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+            </div>
         </form>
-    </div>
-</section>
-
-<!-- Categories Section -->
-<section class="categories">
-    <div class="container">
-        <h2>Explore Categories</h2>
-        <div class="category-grid">
-            <div class="category-card">
-                <img src="Images/khimar 11.jpeg" alt="Hijabs">
-                <h3><a href="hijabs.html">Hijabs</a></h3>
-            </div>
-            <div class="category-card">
-                <img src="Images/body.jpeg" alt="Perfumes">
-                <h3><a href="perfumes.html">Perfumes</a></h3>
-            </div>
-            <div class="category-card">
-                <img src="Images/magnet 5.jpeg" alt="Accessories">
-                <h3><a href="acessories.html">Accessories</a></h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Call-to-Action Section -->
-<section class="call-to-action">
-    <div class="container">
-        <h2>Don't Miss Out!</h2>
-        <p>Browse our collections and find your perfect match today. Your style awaits.</p>
-        <a href="shop.html" class="btn">Shop Now</a>
-    </div>
-</section>
-
-<!-- FAQs Section -->
-<section class="faqs">
-    <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>What is your return policy?</h3>
-            <p>We offer hassle-free returns within 14 days of purchase. See our policy for details.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How long does shipping take?</h3>
-            <p>Shipping times depend on your location. Most orders arrive within 3-5 business days.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Do you offer custom designs?</h3>
-            <p>Yes! Contact us to learn more about our bespoke services.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="contact.html">Contact Us</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="faq.html">FAQ</a>
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <a href="contact.html" class="text-light mx-2">Contact Us</a>
+            <a href="terms.html" class="text-light mx-2">Terms</a>
+            <a href="privacy.html" class="text-light mx-2">Privacy</a>
+            <a href="faq.html" class="text-light mx-2">FAQ</a>
         </div>
-        <p>&copy; 2025 MuslimChic Signature. All Rights Reserved.</p>
+        <p class="mt-3">&copy; 2025 MuslimChic Signature. All Rights Reserved.</p>
     </footer>
-    <script src="main.js"></script>
 
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
